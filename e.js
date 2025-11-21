@@ -472,7 +472,7 @@ function handleOrderSubmit(e) {
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
-  let message = `*New Order from Fikky*\n\n`
+  let message = `*Hello Fikky😊 I would like to place an order*\n\n`
   message += `*Customer Details:*\n`
   message += `Name: ${name}\n`
   message += `Phone: ${phone}\n`
