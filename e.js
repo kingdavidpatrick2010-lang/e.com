@@ -36,7 +36,7 @@ const products = [
     id: 3,
     name: "croptops",
     category: "casual wear",
-    price: 7000,
+    price: 4000,
     image: "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/80/9818082/1.jpg?5043",
   },
   {
@@ -64,7 +64,7 @@ const products = [
     id: 7,
     name: "Top",
     category: "outwears",
-    price: 10000,
+    price: 5000,
     image: "IMG-20251121-WA0018.jpg",
   },
   {
@@ -570,3 +570,4 @@ function toggleMobileMenu() {
 
 // Start App
 init()
+
