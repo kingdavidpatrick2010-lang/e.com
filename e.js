@@ -165,6 +165,20 @@ const products = [
     price: 35000,
     image:"IMG-20251119-WA0165.jpg",
   },
+     {
+    id: 22,
+    name: "Luxury Armless polo",
+    category: "casual wear",
+    price: 25000,
+    image:"IMG-20251122-WA0044.jpg",
+  },
+    {
+    id: 23,
+    name: "Luxury Armless up and down",
+    category: "casual wear",
+    price: 30000,
+    image:"IMG-20251122-WA0039.jpg",
+  },
 ]
 
 // Cart State
@@ -570,4 +584,5 @@ function toggleMobileMenu() {
 
 // Start App
 init()
+
 
