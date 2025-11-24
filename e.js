@@ -179,6 +179,27 @@ const products = [
     price: 30000,
     image:"IMG-20251122-WA0039.jpg",
   },
+     {
+    id: 24,
+    name: "Luxury sweat top",
+    category: "casual wear",
+    price: 29000,
+    image:"IMG-20251124-WA0073.jpg",
+  },
+    {
+    id: 25,
+    name: "Luxury crop top",
+    category: "casual wear",
+    price: 27000,
+    image:"IMG-20251124-WA0078.jpg",
+  },
+      {
+    id: 26,
+    name: "Luxury combat shorts",
+    category: "casual wear",
+    price: 23500,
+    image:"IMG-20251124-WA0082.jpg",
+  },
 ]
 
 // Cart State
@@ -584,5 +605,6 @@ function toggleMobileMenu() {
 
 // Start App
 init()
+
 
 
