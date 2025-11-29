@@ -200,6 +200,20 @@ const products = [
     price: 23500,
     image:"IMG-20251124-WA0082.jpg",
   },
+        {
+    id: 27,
+    name: "Maxi skirt",
+    category: "casual wear",
+    price: 3500,
+    image:"https://i.etsystatic.com/8335233/r/il/0d759b/4503558058/il_1080xN.4503558058_5lty.jpg",
+  },
+          {
+    id: 28,
+    name: "cottage skirt",
+    category: "outwear",
+    price: 5000,
+    image:"https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/65/3222814/1.jpg?7417",
+  },
 ]
 
 // Cart State
@@ -605,6 +619,7 @@ function toggleMobileMenu() {
 
 // Start App
 init()
+
 
 
 
