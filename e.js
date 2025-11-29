@@ -210,7 +210,7 @@ const products = [
           {
     id: 28,
     name: "cottage skirt",
-    category: "outwear",
+    category: "outerwear",
     price: 5000,
     image:"https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/65/3222814/1.jpg?7417",
   },
@@ -619,6 +619,7 @@ function toggleMobileMenu() {
 
 // Start App
 init()
+
 
 
 
