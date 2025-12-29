@@ -3,20 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fikky's- Premium Fashion Store</title>
+    <title>Fikky's - Premium Fashion Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="e.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-letter">Fikky's</span>
+                <span class="logo-letter">collections</span>
+            </div>
+            <div class="loading-text">
+                <span class="loading-dot">.</span>
+                <span class="loading-dot">.</span>
+                <span class="loading-dot">.</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <h1 class="logo">FK</h1>
+                <h1 class="logo">
+                    <span class="logo-text">FK</span>
+                    <span class="logo-sub">Fikky's</span>
+                </h1>
                 
-                <!-- Added hamburger menu button for mobile -->
+                <!-- Hamburger menu button -->
                 <button class="hamburger-menu" id="hamburgerMenu">
                     <span></span>
                     <span></span>
@@ -24,93 +49,232 @@
                 </button>
 
                 <nav class="nav" id="navMenu">
-                    <a href="#home">Home</a>
-                    <a href="#products">Shop</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#products" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop</span>
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-crown"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
                 </nav>
                 <button class="cart-btn" id="cartBtn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 2L7 6H3l3 14h12l3-14h-4L15 2H9z"/>
-                        <circle cx="9" cy="21" r="1"/>
-                        <circle cx="18" cy="21" r="1"/>
-                    </svg>
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Cart Overlay -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-background"></div>
         <div class="hero-content">
-            <h2 class="hero-title">Elevate Your Style</h2>
-            <p class="hero-subtitle">Discover our exclusive collection of premium fashion</p>
-            <a href="#products" class="hero-btn">Shop Collection</a>
+            <div class="hero-badge">
+                <span>Premium</span>
+                <span>Fashion</span>
+            </div>
+            <h2 class="hero-title">
+                <span class="title-line">Elevate Your</span>
+                <span class="title-line highlight">Style</span>
+            </h2>
+            <p class="hero-subtitle">Discover our exclusive collection of premium fashion pieces</p>
+            <div class="hero-cta">
+                <a href="#products" class="hero-btn">
+                    <span>Shop Collection</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="hero-btn secondary">
+                    <span>Our Story</span>
+                    <i class="fas fa-crown"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Hero Stats -->
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number" data-count="200">0</div>
+                <div class="stat-label">Products</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-count="5000">0</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-count="26">0</div>
+                <div class="stat-label">Categories</div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
     <!-- Products Section -->
     <section class="products-section" id="products">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Featured Collection</h2>
+            <div class="section-header">
+                <div class="section-tag">Premium Collection</div>
+                <h2 class="section-title">
+                    <span class="section-title-line">Featured</span>
+                    <span class="section-title-line highlight">Products</span>
+                </h2>
+                <p class="section-subtitle">Handpicked luxury items for the fashion-forward</p>
+            </div>
             
-            <!-- Added search and filter controls -->
-            <div class="filter-controls animate-on-scroll">
+            <!-- Filter Controls -->
+            <div class="filter-controls">
                 <div class="search-box">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search premium fashion...">
+                    <button class="search-clear" id="searchClear">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
                 
-                <div class="category-filters" id="categoryFilters">
-                    <!-- Categories will be generated dynamically -->
+                <div class="filter-group">
+                    <div class="category-filters" id="categoryFilters">
+                        <!-- Categories will be generated dynamically -->
+                    </div>
+                    <button class="filter-toggle" id="filterToggle">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter</span>
+                    </button>
                 </div>
             </div>
 
+            <!-- Mobile Filter Overlay -->
+            <div class="mobile-filter-overlay" id="mobileFilterOverlay">
+                <div class="mobile-filter-content">
+                    <div class="mobile-filter-header">
+                        <h3>Filter Products</h3>
+                        <button class="close-filter" id="closeFilter">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-categories">
+                        <!-- Mobile categories will be generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
             <div class="products-grid" id="productsGrid">
                 <!-- Products will be dynamically inserted here -->
             </div>
+
+            <!-- Quick View Modal -->
+            <div class="quick-view-modal" id="quickViewModal">
+                <div class="quick-view-content">
+                    <button class="quick-view-close" id="quickViewClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="quick-view-body" id="quickViewBody">
+                        <!-- Quick view content will be loaded here -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Section with split layout and stats -->
+    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Our Heritage</div>
+                <h2 class="section-title">
+                    <span class="section-title-line">Crafting</span>
+                    <span class="section-title-line highlight">Excellence</span>
+                </h2>
+            </div>
+
             <div class="about-content">
-                <div class="about-image-wrapper animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Our Boutique" class="about-image">
-                    <div class="about-badge">
-                        <span class="years">Est.</span>
-                        <span class="year">2025</span>
+                <!-- CEO Section -->
+                <div class="ceo-section">
+                    <div class="ceo-card">
+                        <div class="ceo-image-wrapper">
+                            <div class="ceo-image-container">
+                                <img src="IMG-20251229-WA0414.jpg" 
+                                     alt="CEO - Fikky's Collection" 
+                                     class="ceo-image">
+                                <div class="ceo-glow"></div>
+                                <div class="ceo-badge">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                            </div>
+                            <div class="ceo-info">
+                                <h3 class="ceo-name">Lawal Oluwatosin</h3>
+                                <p class="ceo-title">Founder & CEO</p>
+                                <div class="ceo-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"Fashion is not just about clothing, it's about creating experiences that empower individuals to express their authentic selves."</p>
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="about-text animate-on-scroll">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Our Story</h2>
-                    <p class="about-description">
-                        Fikky's Collection was born from a passion for timeless elegance and modern sophistication. We believe that true luxury lies in the details—the stitch of a hem, the texture of fabric, and the confidence it inspires.
-                    </p>
-                    <p class="about-description">
-                        Our curated collection brings together the finest pieces from around the globe, designed for those who appreciate quality without compromise.
-                    </p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">5k+</span>
-                            <span class="stat-label">Happy Clients</span>
+
+                <!-- Company Story -->
+                <div class="about-details">
+                    <div class="about-story">
+                        <h3 class="story-title">Our Journey</h3>
+                        <p class="story-text">
+                            Fikky's Collection was born from a vision to redefine premium fashion in Nigeria. 
+                            What started as a small boutique in Abuja has grown into a leading fashion destination, 
+                            known for our commitment to quality, style, and customer satisfaction.
+                        </p>
+                        <p class="story-text">
+                            Each piece in our collection is carefully curated, combining timeless elegance with 
+                            contemporary trends. We work directly with artisans and designers to bring you unique, 
+                            high-quality fashion that tells a story.
+                        </p>
+                    </div>
+
+                    <!-- Milestones -->
+                    <div class="milestones">
+                        <div class="milestone">
+                            <div class="milestone-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <h4>Quality First</h4>
+                                <p>100% authentic premium materials</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Authentic</span>
+                        <div class="milestone">
+                            <div class="milestone-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <h4>Customer Love</h4>
+                                <p>5,000+ satisfied customers</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Support</span>
+                        <div class="milestone">
+                            <div class="milestone-icon">
+                                <i class="fas fa-truck-fast"></i>
+                            </div>
+                            <div class="milestone-content">
+                                <h4>Fast Delivery</h4>
+                                <p>Nationwide delivery in 24-48 hours</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,66 +282,103 @@
         </div>
     </section>
 
-    <!-- Contact Section with info and form -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Get in Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info animate-on-scroll">
+            <div class="section-header">
+                <div class="section-tag">Get in Touch</div>
+                <h2 class="section-title">
+                    <span class="section-title-line">Connect</span>
+                    <span class="section-title-line highlight">With Us</span>
+                </h2>
+                <p class="section-subtitle">We're here to help you style your perfect look</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <h3>Visit Us</h3>
-                        <p>Location<br>Dutse, Kuje Abuja</p>
+                        <h3>Visit Our Store</h3>
+                        <p>Dutse/Kuje Abuja</p>
+                        <p class="contact-note">📍 Abuja, Nigeria</p>
                     </div>
+                    
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
+                            <i class="fas fa-calendar-check"></i>
                         </div>
-                        <h3>Email Us</h3>
-                        <p>Lawaloluwatosin@gmail.com<br>support@fikky-store.com</p>
+                        <h3>Delivery Schedule</h3>
+                        <p><strong>Weekdays:</strong> Via dispatch rider (6-7pm)</p>
+                        <p><strong>Weekends:</strong> Saturday & Sunday delivery</p>
                     </div>
+                    
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
+                            <i class="fas fa-phone-alt"></i>
                         </div>
-                        <h3>Call Us</h3>
-                        <p>+2348160227731<br>Mon-Fri, 9am-6pm</p>
-                     
-
-📍 Location: Dutse/Kuje Abuja 
-
-🚚 Delivery Days: Saturday & Sunday
-📦 Weekday Delivery: Available via dispatch rider or evening (6–7pm)
-All prices are Negotiable.
-
-💖 Thanks for shopping with Fikky's collection  💖
+                        <h3>Call/WhatsApp</h3>
+                        <p>+234 816 022 7731</p>
+                        <p>Mon-Fri, 9am-6pm</p>
                     </div>
                 </div>
-                <div class="contact-form-wrapper animate-on-scroll">
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="contactName">Full Name</label>
+                            <label for="contactName">
+                                <i class="fas fa-user"></i>
+                                Full Name *
+                            </label>
                             <input type="text" id="contactName" required placeholder="Enter your name">
                         </div>
-                        <div class="form-group">
-                            <label for="contactEmail">Email Address</label>
-                            <input type="email" id="contactEmail" required placeholder="Enter your email">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactEmail">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address *
+                                </label>
+                                <input type="email" id="contactEmail" required placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">
+                                    <i class="fas fa-phone"></i>
+                                    Phone Number *
+                                </label>
+                                <input type="tel" id="contactPhone" required placeholder="+234 XXX XXX XXXX">
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="contactMessage">Message</label>
-                            <textarea id="contactMessage" required placeholder="Enter your message" rows="4"></textarea>
+                            <label for="contactSubject">
+                                <i class="fas fa-tag"></i>
+                                Subject *
+                            </label>
+                            <select id="contactSubject" required>
+                                <option value="">Select a subject</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="product">Product Question</option>
+                                <option value="delivery">Delivery Information</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <button type="submit" class="contact-form-submit">Send Message</button>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">
+                                <i class="fas fa-comment"></i>
+                                Your Message *
+                            </label>
+                            <textarea id="contactMessage" required placeholder="Tell us how we can help..." rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -187,95 +388,162 @@ All prices are Negotiable.
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="social-icons">
-                <a href="https://www.tiktok.com/@luxury.wear.by.k" target="_blank" class="social-icon tiktok" aria-label="TikTok">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/luxury.wears.by.k?igsh=MWk4MmR0cjRxMzhkYw%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-                <!-- Fixed WhatsApp link - replace YOUR_PHONE_NUMBER with your actual number including country code -->
-                <a href="https://wa.me/2348160227731" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                </a>
+            <div class="footer-content">
+                <!-- Brand Info -->
+                <div class="footer-brand">
+                    <h2 class="footer-logo">FK</h2>
+                    <p class="footer-tagline">Premium Fashion Redefined</p>
+                    <p class="footer-description">
+                        Bringing you the finest fashion pieces with unmatched quality 
+                        and exceptional customer service.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" id="trackOrderBtn">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <p>Stay updated with our latest collections</p>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@luxury.wear.by.k" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/luxury.wears.by.k" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2348160227731" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe for exclusive offers and fashion tips</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <p>&copy; 2025 Fikky's. Premium Fashion Store. All rights reserved.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fikky's Collection. All rights reserved.</p>
+                <p>📍 Dutse/Kuje Abuja | 📞 +234 816 022 7731</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <button class="close-btn" id="closeCart">&times;</button>
+            <h3>
+                <i class="fas fa-shopping-cart"></i>
+                Your Cart
+            </h3>
+            <button class="close-btn" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
 
-        <!-- Cart view - shown first when sidebar opens -->
-        <div id="cartContent" class="cart-content">
+        <div class="cart-content" id="cartContent">
             <div class="cart-items" id="cartItems"></div>
         </div>
 
-        <!-- Checkout form - shown after clicking proceed to checkout -->
-        <div id="checkoutForm" class="checkout-form">
+        <div class="checkout-form" id="checkoutForm">
             <div class="checkout-header">
-                <button class="back-btn" id="backToCart">← Back to Cart</button>
-                <h3>Checkout</h3>
+                <button class="back-btn" id="backToCart">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Cart
+                </button>
+                <h3>Checkout Details</h3>
             </div>
-            <form id="orderForm" class="contact-form">
+            <form id="orderForm" class="order-form">
                 <div class="form-group">
-                    <label for="customerName">Full Name *</label>
+                    <label for="customerName">
+                        <i class="fas fa-user"></i>
+                        Full Name *
+                    </label>
                     <input type="text" id="customerName" required placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
-                    <label for="customerPhone">Phone Number *</label>
-                    <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+                    <label for="customerPhone">
+                        <i class="fas fa-phone"></i>
+                        Phone Number *
+                    </label>
+                    <input type="tel" id="customerPhone" required placeholder="+234 XXX XXX XXXX">
                 </div>
                 <div class="form-group">
-                    <label for="customerEmail">Email Address</label>
-                    <input type="email" id="customerEmail" placeholder="Enter your email">
+                    <label for="customerEmail">
+                        <i class="fas fa-envelope"></i>
+                        Email Address
+                    </label>
+                    <input type="email" id="customerEmail" placeholder="Enter your email (optional)">
                 </div>
                 <div class="form-group">
-                    <label for="customerAddress">Delivery Address *</label>
+                    <label for="customerAddress">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Delivery Address *
+                    </label>
                     <textarea id="customerAddress" required placeholder="Enter your full delivery address" rows="3"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="customerNotes">Order Notes (Optional)</label>
+                    <label for="customerNotes">
+                        <i class="fas fa-sticky-note"></i>
+                        Order Notes (Optional)
+                    </label>
                     <textarea id="customerNotes" placeholder="Add any special requests or notes" rows="2"></textarea>
                 </div>
                 <button type="submit" class="whatsapp-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
+                    <i class="fab fa-whatsapp"></i>
                     Complete Order on WhatsApp
                 </button>
             </form>
         </div>
 
-        <!-- Updated cart footer with proceed to checkout button -->
         <div class="cart-footer" id="cartFooter">
             <div class="cart-total">
                 <span>Total:</span>
                 <span class="total-price" id="totalPrice">₦0</span>
             </div>
-            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            <div class="cart-actions">
+                <button class="continue-shopping" id="continueShopping">
+                    <i class="fas fa-arrow-left"></i>
+                    Continue Shopping
+                </button>
+                <button class="checkout-btn" id="checkoutBtn">
+                    Proceed to Checkout
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
         </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
 
     <script src="e.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
