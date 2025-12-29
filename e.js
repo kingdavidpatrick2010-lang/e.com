@@ -1,7 +1,7 @@
 // Configuration
 const CONFIG = {
     WHATSAPP_NUMBER: "2348160227731",
-    CURRENCY_SYMBOL: "₦",
+    CURRENCY_SYMBOL: "",
     SHOP_NAME: "Fikky's Collection",
     SHOP_LOCATION: "Dutse/Kuje Abuja",
     CEO_NAME: "Tosin Lawal",
