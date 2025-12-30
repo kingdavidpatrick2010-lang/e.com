@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="e.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="e.css">
 </head>
 <body>
     <!-- Loading Animation -->
@@ -33,12 +33,12 @@
     <div class="particles" id="particles"></div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <h1 class="logo">
-                    <span class="logo-text">FK</span>
-                    <span class="logo-sub">Fikky's</span>
+                    <span class="logo-text">Fikky's</span>
+                    <span class="logo-sub">Collection</span>
                 </h1>
                 
                 <!-- Hamburger menu button -->
@@ -65,10 +65,15 @@
                         <i class="fas fa-envelope"></i>
                         <span>Contact</span>
                     </a>
+                    <a href="https://wa.me/2348160227731" target="_blank" class="nav-link" id="trackOrderBtn">
+                        <i class="fas fa-truck"></i>
+                        <span>Track Order</span>
+                    </a>
                 </nav>
                 <button class="cart-btn" id="cartBtn">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count" id="cartCount">0</span>
+                    <span>Cart</span>
+                    <div class="cart-count" id="cartCount">0</div>
                 </button>
             </div>
         </div>
@@ -77,51 +82,53 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-background"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span>Premium</span>
-                <span>Fashion</span>
-            </div>
-            <h2 class="hero-title">
-                <span class="title-line">Elevate Your</span>
-                <span class="title-line highlight">Style</span>
-            </h2>
-            <p class="hero-subtitle">Discover our exclusive collection of premium fashion pieces</p>
-            <div class="hero-cta">
-                <a href="#products" class="hero-btn">
-                    <span>Shop Collection</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#about" class="hero-btn secondary">
-                    <span>Our Story</span>
-                    <i class="fas fa-crown"></i>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Hero Stats -->
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-number" data-count="200">0</div>
-                <div class="stat-label">Products</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-count="5000">0</div>
-                <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-count="26">0</div>
-                <div class="stat-label">Categories</div>
-            </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <div class="arrow">
-                <i class="fas fa-chevron-down"></i>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Premium</span>
+                    <span>Fashion</span>
+                </div>
+                <h2 class="hero-title">
+                    <span class="title-line">Elevate Your</span>
+                    <span class="title-line highlight">Style</span>
+                </h2>
+                <p class="hero-subtitle">Discover our exclusive collection of premium fashion pieces</p>
+                <div class="hero-cta">
+                    <a href="#products" class="hero-btn">
+                        <span>Shop Collection</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="hero-btn secondary">
+                        <span>Our Story</span>
+                        <i class="fas fa-crown"></i>
+                    </a>
+                </div>
+                
+                <!-- Hero Stats -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="26">0</div>
+                        <div class="stat-label">Collections</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="2">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -178,20 +185,20 @@
             <div class="products-grid" id="productsGrid">
                 <!-- Products will be dynamically inserted here -->
             </div>
-
-            <!-- Quick View Modal -->
-            <div class="quick-view-modal" id="quickViewModal">
-                <div class="quick-view-content">
-                    <button class="quick-view-close" id="quickViewClose">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="quick-view-body" id="quickViewBody">
-                        <!-- Quick view content will be loaded here -->
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="quick-view-content">
+            <button class="quick-view-close" id="quickViewClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="quick-view-body" id="quickViewBody">
+                <!-- Quick view content will be loaded here -->
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section class="about-section" id="about">
@@ -208,14 +215,16 @@
                 <!-- CEO Section -->
                 <div class="ceo-section">
                     <div class="ceo-card">
+                        <div class="ceo-badge">
+                            <i class="fas fa-crown"></i>
+                        </div>
                         <div class="ceo-image-wrapper">
                             <div class="ceo-image-container">
                                 <img src="IMG-20251229-WA0414.jpg" 
                                      alt="CEO - Fikky's Collection" 
-                                     class="ceo-image">
+                                     class="ceo-image"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=80'">
                                 <div class="ceo-glow"></div>
-                               
-                                </div>
                             </div>
                             <div class="ceo-info">
                                 <h3 class="ceo-name">Lawal Oluwatosin</h3>
@@ -390,7 +399,7 @@
             <div class="footer-content">
                 <!-- Brand Info -->
                 <div class="footer-brand">
-                    <h2 class="footer-logo">FK</h2>
+                    <h2 class="footer-logo">Fikky's</h2>
                     <p class="footer-tagline">Premium Fashion Redefined</p>
                     <p class="footer-description">
                         Bringing you the finest fashion pieces with unmatched quality 
@@ -406,7 +415,7 @@
                         <li><a href="#products">Shop</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#" id="trackOrderBtn">Track Order</a></li>
+                        <li><a href="https://wa.me/2348160227731" target="_blank" id="trackOrderLink">Track Order</a></li>
                     </ul>
                 </div>
 
@@ -423,9 +432,6 @@
                         </a>
                         <a href="https://wa.me/2348160227731" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="social-icon facebook" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
                 </div>
@@ -456,6 +462,7 @@
     </button>
 
     <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
             <h3>
@@ -546,5 +553,3 @@
     <script src="e.js"></script>
 </body>
 </html>
-
-
