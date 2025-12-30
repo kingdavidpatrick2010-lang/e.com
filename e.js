@@ -1,7 +1,7 @@
 // Configuration
 const CONFIG = {
     WHATSAPP_NUMBER: "2348160227731",
-    CURRENCY_SYMBOL: "",
+    CURRENCY_SYMBOL: "₦",
     SHOP_NAME: "Fikky's Collection",
     SHOP_LOCATION: "Dutse/Kuje Abuja",
     CEO_NAME: "Tosin Lawal",
@@ -286,7 +286,8 @@ const elements = {
     backToTop: document.getElementById('backToTop'),
     
     // Track order
-    trackOrderBtn: document.getElementById('trackOrderBtn')
+    trackOrderBtn: document.getElementById('trackOrderBtn'),
+    trackOrderLink: document.getElementById('trackOrderLink')
 };
 
 // Initialize App
@@ -424,11 +425,7 @@ function searchProducts(query) {
     
     // Show/hide clear button
     if (elements.searchClear) {
-        if (query.length > 0) {
-            elements.searchClear.style.display = 'flex';
-        } else {
-            elements.searchClear.style.display = 'none';
-        }
+        elements.searchClear.style.display = query.length > 0 ? 'flex' : 'none';
     }
     
     applyFilters();
@@ -450,14 +447,12 @@ function applyFilters() {
 function renderProducts() {
     if (!elements.productsGrid) return;
     
-    console.log(`Rendering ${filteredProducts.length} products`);
-    
     if (filteredProducts.length === 0) {
         elements.productsGrid.innerHTML = `
-            <div class="no-results" style="grid-column: 1/-1;">
-                <i class="fas fa-search"></i>
-                <p>No products found. Try a different search or category.</p>
-                <button class="hero-btn secondary" onclick="resetFilters()">
+            <div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                <i class="fas fa-search" style="font-size: 48px; color: var(--color-text-muted); margin-bottom: 20px;"></i>
+                <p style="font-size: 18px; color: var(--color-text-muted); margin-bottom: 30px;">No products found. Try a different search or category.</p>
+                <button class="hero-btn secondary" onclick="resetFilters()" style="border: none;">
                     <span>Reset Filters</span>
                     <i class="fas fa-redo"></i>
                 </button>
@@ -513,6 +508,7 @@ function resetFilters() {
     showToast('Filters reset successfully', 'success');
 }
 
+// QUICK VIEW FUNCTION
 function showQuickView(productId) {
     const product = products.find(p => p.id === productId);
     if (!product || !elements.quickViewBody) return;
@@ -528,16 +524,20 @@ function showQuickView(productId) {
                 <h2 class="product-name">${product.name}</h2>
                 <p class="product-description">${product.description || 'Premium quality fashion item from Fikky\'s Collection'}</p>
                 <div class="product-price">${CONFIG.CURRENCY_SYMBOL}${product.price.toLocaleString()}</div>
+                
                 <div class="quick-view-actions">
-                    <button class="add-to-cart-btn large" onclick="addToCart(${product.id}); closeQuickView();">
+                    <button class="add-to-cart-btn large" onclick="addToCart(${product.id}); closeQuickView();" 
+                            data-tooltip="Add to cart and close">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Add to Cart</span>
                     </button>
-                    <button class="whatsapp-btn" onclick="shareProduct(${product.id})">
+                    <button class="whatsapp-btn" onclick="shareProduct(${product.id})" 
+                            data-tooltip="Share on WhatsApp">
                         <i class="fab fa-whatsapp"></i>
-                        <span>Share on WhatsApp</span>
+                        <span>Share</span>
                     </button>
                 </div>
+                
                 <div class="product-features">
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
@@ -556,16 +556,28 @@ function showQuickView(productId) {
         </div>
     `;
     
+    // Show modal
     if (elements.quickViewModal) {
         elements.quickViewModal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Add animation class
+        setTimeout(() => {
+            elements.quickViewModal.style.opacity = '1';
+        }, 10);
     }
 }
 
 function closeQuickView() {
     if (elements.quickViewModal) {
-        elements.quickViewModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        // Remove active class with animation
+        elements.quickViewModal.style.opacity = '0';
+        
+        setTimeout(() => {
+            elements.quickViewModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            elements.quickViewModal.style.opacity = '1';
+        }, 300);
     }
 }
 
@@ -573,18 +585,21 @@ function shareProduct(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
     
-    const message = `Check out this amazing product from ${CONFIG.SHOP_NAME}!\n\n` +
+    const message = `🌟 *Check out this amazing product from ${CONFIG.SHOP_NAME}!* 🌟\n\n` +
                    `*${product.name}*\n` +
-                   `Category: ${product.category}\n` +
-                   `Price: ${CONFIG.CURRENCY_SYMBOL}${product.price.toLocaleString()}\n` +
-                   `Description: ${product.description || 'Premium quality fashion item'}\n\n` +
-                   `Shop now at Fikky's Collection! 🛍️`;
+                   `💰 Price: ${CONFIG.CURRENCY_SYMBOL}${product.price.toLocaleString()}\n` +
+                   `📂 Category: ${product.category}\n` +
+                   `📝 Description: ${product.description || 'Premium quality fashion item'}\n\n` +
+                   `Shop now at ${CONFIG.SHOP_NAME}!\n` +
+                   `📍 Location: ${CONFIG.SHOP_LOCATION}\n` +
+                   `📞 Contact: +${CONFIG.WHATSAPP_NUMBER}`;
     
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
     
     window.open(whatsappURL, '_blank');
-    showToast('Product shared on WhatsApp!', 'success');
+    showToast('Product shared on WhatsApp! 📱', 'success');
+    closeQuickView();
 }
 
 // Cart Functions
@@ -634,7 +649,10 @@ function renderCartItems() {
             <div class="empty-cart">
                 <i class="fas fa-shopping-cart"></i>
                 <p>Your cart is empty</p>
-                <button class="hero-btn secondary" onclick="closeCartSidebar()">
+                <p class="cart-empty-message" style="color: var(--color-text-muted); font-size: 14px; margin-top: 10px;">
+                    Add some products to get started!
+                </p>
+                <button class="hero-btn secondary" onclick="closeCartSidebar()" style="border: none; margin-top: 20px;">
                     <span>Continue Shopping</span>
                     <i class="fas fa-arrow-right"></i>
                 </button>
@@ -642,6 +660,11 @@ function renderCartItems() {
         `;
         if (elements.cartFooter) {
             elements.cartFooter.style.display = "none";
+        }
+        
+        // Ensure total is set to ₦0
+        if (elements.totalPrice) {
+            elements.totalPrice.textContent = `${CONFIG.CURRENCY_SYMBOL}0`;
         }
         return;
     }
@@ -700,7 +723,57 @@ function removeFromCart(productId) {
         cart = cart.filter(item => item.id !== productId);
         updateCart();
         showToast(`${item.name} removed from cart`, 'error');
+        
+        // Check if cart is empty after removal
+        if (cart.length === 0) {
+            // If cart is empty, reset the total display
+            setTimeout(() => {
+                if (elements.totalPrice) {
+                    elements.totalPrice.textContent = `${CONFIG.CURRENCY_SYMBOL}0`;
+                }
+                
+                // Also update the cart count animation
+                if (elements.cartCount) {
+                    elements.cartCount.textContent = '0';
+                }
+                
+                // Show empty cart message
+                showToast("Cart is now empty", "info");
+            }, 100);
+        }
     }
+}
+
+// Clear Cart Function
+function clearCart() {
+    // Clear cart array
+    cart = [];
+    
+    // Save to localStorage
+    localStorage.setItem('fikky-cart', JSON.stringify(cart));
+    
+    // Update cart count to 0
+    if (elements.cartCount) {
+        elements.cartCount.textContent = '0';
+        // Add animation for visual feedback
+        elements.cartCount.style.transform = 'scale(1.5)';
+        setTimeout(() => {
+            elements.cartCount.style.transform = 'scale(1)';
+        }, 300);
+    }
+    
+    // Update total price to ₦0
+    if (elements.totalPrice) {
+        elements.totalPrice.textContent = `${CONFIG.CURRENCY_SYMBOL}0`;
+    }
+    
+    // Update cart display if sidebar is open
+    if (elements.cartSidebar && elements.cartSidebar.classList.contains("active")) {
+        renderCartItems();
+    }
+    
+    // Show success message
+    showToast("Cart cleared successfully", "success");
 }
 
 function openCart() {
@@ -846,19 +919,45 @@ function handleOrderSubmit(e) {
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodedMessage}`;
     
+    // Show loading state on the WhatsApp button
+    const whatsappBtn = elements.orderForm?.querySelector('.whatsapp-btn');
+    const originalBtnText = whatsappBtn?.innerHTML;
+    
+    if (whatsappBtn) {
+        whatsappBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+        whatsappBtn.disabled = true;
+    }
+    
     // Open WhatsApp in new tab
-    window.open(whatsappURL, '_blank');
-    
-    // Show success message
-    showToast("Order sent to WhatsApp! 📱 Please check your messages.", "success");
-    
-    // Clear cart and close sidebar
     setTimeout(() => {
-        cart = [];
-        updateCart();
+        window.open(whatsappURL, '_blank');
+        
+        // Show success message
+        showToast("Order sent to WhatsApp! 📱 Cart has been cleared.", "success");
+        
+        // Clear cart and reset total
+        clearCart();
+        
+        // Reset the form
         if (elements.orderForm) elements.orderForm.reset();
-        closeCartSidebar();
-    }, 1500);
+        
+        // Go back to cart view
+        backToCartView();
+        
+        // Reset WhatsApp button
+        setTimeout(() => {
+            if (whatsappBtn) {
+                whatsappBtn.innerHTML = originalBtnText;
+                whatsappBtn.disabled = false;
+            }
+            
+            // Close cart sidebar after a delay
+            setTimeout(() => {
+                closeCartSidebar();
+            }, 2000);
+        }, 1000);
+        
+    }, 1000);
 }
 
 function handleContactSubmit(e) {
@@ -1106,7 +1205,7 @@ function setupEventListeners() {
         elements.closeFilter.addEventListener("click", closeMobileFilter);
     }
     
-    // Quick view
+    // Quick View
     if (elements.quickViewClose) {
         elements.quickViewClose.addEventListener("click", closeQuickView);
     }
@@ -1161,12 +1260,23 @@ function setupEventListeners() {
         });
     }
     
-    // Track order
+    // Track order - Direct to WhatsApp
+    function trackOrder() {
+        const whatsappURL = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}`;
+        window.open(whatsappURL, '_blank');
+    }
+    
     if (elements.trackOrderBtn) {
         elements.trackOrderBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            const message = encodeURIComponent(`*TRACK ORDER*\n\nHello, I would like to track my order from ${CONFIG.SHOP_NAME}.`);
-            window.open(`https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${message}`, '_blank');
+            trackOrder();
+        });
+    }
+    
+    if (elements.trackOrderLink) {
+        elements.trackOrderLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            trackOrder();
         });
     }
     
