@@ -205,7 +205,7 @@ const products = [
     {
         id: 20,
         name: "Hoddie",
-        category: "outwear",
+        category: "Outerwear",
         price: 27000,
         image: "WhatsApp Image 2025-12-29 at 13.01.33.jpeg",
         description: "high quality luxury crop hoodie"
@@ -223,7 +223,7 @@ const products = [
     {
         id: 22,
         name: "Quality tees",
-        category: "casual Wear",
+        category: "Casual Wear",
         price: 19000,
         image: "WhatsApp Image 2025-12-29 at 12.59.42.jpeg",
         description: "Quality tees"
@@ -249,7 +249,7 @@ const products = [
     {
         id: 25,
         name: "Luxury Big Tops",
-        category: "outwear",
+        category: "Footwear",
         price: 15500,
         image: "IMG-20251119-WA0138.jpg",
         description: "Trendy luxury big tops"
@@ -257,7 +257,7 @@ const products = [
     {
         id: 26,
         name: "Luxury gown",
-        category: "Formal wear",
+        category: "Formal Wear",
         price: 13900,
         image: "WhatsApp Image 2025-12-30 at 14.35.38.jpeg",
         description: "High quality luxury gown"
@@ -509,7 +509,7 @@ function safelyLoadProducts() {
     // Log any errors
     if (errors.length > 0) {
         console.warn("⚠️ Some products had issues:", errors);
-        showToast(`Fixed ${errors.length} product errors`, 'info');
+        // REMOVED THE TOAST NOTIFICATION HERE
     }
     
     return validProducts;
@@ -866,12 +866,10 @@ function init() {
         // Safely load products first
         console.log("🛍️ Loading products...");
         
-        // Validate all products on startup
+        // Validate all products on startup (without showing toast)
         const invalidProducts = window.FikkyShop.validateAll();
         
-        if (invalidProducts.length > 0) {
-            showToast(`Fixed ${invalidProducts.length} product issues`, 'info');
-        }
+        // REMOVED: No longer shows toast for product issues
         
         // Show product count
         console.log(`📊 Loaded ${products.length} products`);
