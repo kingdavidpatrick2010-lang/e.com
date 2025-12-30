@@ -1,4 +1,6 @@
-// Configuration
+// ==============================================
+// CONFIGURATION - EDIT THESE SETTINGS
+// ==============================================
 const CONFIG = {
     WHATSAPP_NUMBER: "2348160227731",
     CURRENCY_SYMBOL: "₦",
@@ -6,11 +8,46 @@ const CONFIG = {
     SHOP_LOCATION: "Dutse/Kuje Abuja",
     CEO_NAME: "Tosin Lawal",
     CEO_TITLE: "Founder & CEO",
-    CEO_QUOTE: "Fashion is not just about clothing, it's about creating experiences that empower individuals to express their authentic selves."
+    CEO_QUOTE: "Fashion is not just about clothing, it's about creating experiences that empower individuals to express their authentic selves.",
+    
+    // Store Information
+    STORE_INFO: {
+        address: "Dutse/Kuje Abuja",
+        phone: "+234 816 022 7731",
+        businessHours: "Mon-Sun: 9:00 AM - 8:00 PM",
+        deliveryWeekdays: "6-7pm via dispatch rider",
+        deliveryWeekends: "Saturday & Sunday delivery"
+    }
 };
 
-// Product Data
+// ==============================================
+// PRODUCTS DATABASE - ADD YOUR PRODUCTS HERE
+// ==============================================
+// HOW TO ADD A NEW PRODUCT:
+// 1. Copy the example below and paste it in the products array
+// 2. Fill in the details
+// 3. IMPORTANT: id must be unique (use next number in sequence)
+// 4. Choose from these categories: 
+//    - "Casual Wear" 
+//    - "Accessories" 
+//    - "Formal Wear"
+//    - "Footwear" 
+//    - "Knitwear" 
+//    - "Outerwear" 
+//    - "Inner Wear"
+// 
+// PRODUCT EXAMPLE:
+// {
+//     id: 36, // ← CHANGE THIS NUMBER (must be unique)
+//     name: "Your Product Name",
+//     category: "Casual Wear", // ← Choose from list above
+//     price: 15000, // ← Price in numbers only (without ₦ symbol)
+//     image: "your-image.jpg", // ← Your image filename or URL
+//     description: "Describe your product here"
+// },
+
 const products = [
+    // ============== CASUAL WEAR ==============
     {
         id: 1,
         name: "Baggy Jeans",
@@ -21,14 +58,6 @@ const products = [
     },
     {
         id: 2,
-        name: "Hand Fans",
-        category: "Accessories",
-        price: 7000,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Rt5C7yKcHaeFD6NCMRLM_WzNIMKx2jeJPg&s",
-        description: "Elegant hand fans for style and comfort"
-    },
-    {
-        id: 3,
         name: "Crop Tops",
         category: "Casual Wear",
         price: 7000,
@@ -36,47 +65,7 @@ const products = [
         description: "Trendy crop tops in various designs"
     },
     {
-        id: 4,
-        name: "Shirt",
-        category: "Formal Wear",
-        price: 7000,
-        image: "https://i5.walmartimages.com/seo/George-Men-s-Assorted-Crew-T-Shirts-6-Pack_9a49c841-5808-4fe0-b7ab-15d040df38f4.d976930a03bcef0f6b055077f0ee3a77.jpeg",
-        description: "Classic formal shirts for professional look"
-    },
-    {
-        id: 5,
-        name: "Premium Sneakers",
-        category: "Footwear",
-        price: 33000,
-        image: "https://www.cartrollers.com/wp-content/uploads/2022/11/PREMIUM-UNISEX-FASHION-STELLAR-SNEAKERS-2.jpeg",
-        description: "Luxury sneakers with premium materials"
-    },
-    {
-        id: 6,
-        name: "Leggings",
-        category: "Knitwear",
-        price: 12000,
-        image: "https://hips.hearstapps.com/hmg-prod/images/whm250110-digital-ecomm-leggingswithpockets-lululemon-4474-68deb0bcb4d87.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*",
-        description: "Comfortable and stylish leggings"
-    },
-    {
-        id: 7,
-        name: "Designer Top",
-        category: "Outerwear",
-        price: 10000,
-        image: "IMG-20251121-WA0018.jpg",
-        description: "Exclusive designer top collection"
-    },
-    {
-        id: 8,
-        name: "Sunset Lamp",
-        category: "Accessories",
-        price: 10500,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkNiZOLksA4w9T4t72f_PobEb3CASwJI8JA&s",
-        description: "Beautiful sunset lamp for ambient lighting"
-    },
-    {
-        id: 9,
+        id: 3,
         name: "Luxury Sweatshirt",
         category: "Casual Wear",
         price: 29000,
@@ -84,15 +73,7 @@ const products = [
         description: "Premium quality luxury sweatshirt"
     },
     {
-        id: 10,
-        name: "NGM Collection",
-        category: "Outerwear",
-        price: 16000,
-        image: "IMG-20251119-WA0170.jpg",
-        description: "Exclusive NGM collection pieces"
-    },
-    {
-        id: 11,
+        id: 4,
         name: "Quality Tees",
         category: "Casual Wear",
         price: 17000,
@@ -100,31 +81,7 @@ const products = [
         description: "High quality t-shirts collection"
     },
     {
-        id: 12,
-        name: "Luxury Big Tops",
-        category: "Footwear",
-        price: 15500,
-        image: "IMG-20251119-WA0138.jpg",
-        description: "Trendy luxury big tops"
-    },
-    {
-        id: 13,
-        name: "Phone Holder with Amplifier",
-        category: "Accessories",
-        price: 16000,
-        image: "IMG-20251119-WA0140.jpg",
-        description: "F19 mobile phone holder with screen amplifier"
-    },
-    {
-        id: 14,
-        name: "Stanley Cup",
-        category: "Accessories",
-        price: 17000,
-        image: "IMG-20251119-WA0141.jpg",
-        description: "Premium Stanley cup collection"
-    },
-    {
-        id: 15,
+        id: 5,
         name: "Premium Denim Jean",
         category: "Casual Wear",
         price: 45000,
@@ -132,7 +89,7 @@ const products = [
         description: "Premium quality denim jeans"
     },
     {
-        id: 16,
+        id: 6,
         name: "Joggers",
         category: "Casual Wear",
         price: 20000,
@@ -140,15 +97,7 @@ const products = [
         description: "Comfortable and stylish joggers"
     },
     {
-        id: 17,
-        name: "Ladies Shorts",
-        category: "Outerwear",
-        price: 10500,
-        image: "IMG-20251119-WA0150.jpg",
-        description: "Quality shorts for ladies"
-    },
-    {
-        id: 18,
+        id: 7,
         name: "Amapiano Joggers",
         category: "Casual Wear",
         price: 20000,
@@ -156,15 +105,7 @@ const products = [
         description: "Trendy Amapiano style joggers"
     },
     {
-        id: 19,
-        name: "Booty Shorts",
-        category: "Inner Wear",
-        price: 7500,
-        image: "IMG-20251121-WA0049.jpg",
-        description: "Stylish booty shorts"
-    },
-    {
-        id: 20,
+        id: 8,
         name: "Trendy Cap",
         category: "Casual Wear",
         price: 10500,
@@ -172,7 +113,7 @@ const products = [
         description: "Fashionable trendy caps"
     },
     {
-        id: 21,
+        id: 9,
         name: "Luxury Hoodies",
         category: "Casual Wear",
         price: 35000,
@@ -180,7 +121,7 @@ const products = [
         description: "Premium luxury hoodies collection"
     },
     {
-        id: 22,
+        id: 10,
         name: "Armless Polo",
         category: "Casual Wear",
         price: 25000,
@@ -188,7 +129,7 @@ const products = [
         description: "Luxury armless polo shirts"
     },
     {
-        id: 23,
+        id: 11,
         name: "Armless Up and Down",
         category: "Casual Wear",
         price: 30000,
@@ -196,7 +137,7 @@ const products = [
         description: "Stylish armless up and down set"
     },
     {
-        id: 24,
+        id: 12,
         name: "Luxury Sweat Top",
         category: "Casual Wear",
         price: 29000,
@@ -204,7 +145,7 @@ const products = [
         description: "Premium sweat tops collection"
     },
     {
-        id: 25,
+        id: 13,
         name: "Luxury Crop Top",
         category: "Casual Wear",
         price: 27000,
@@ -212,17 +153,634 @@ const products = [
         description: "Exclusive luxury crop tops"
     },
     {
-        id: 26,
+        id: 14,
         name: "Combat Shorts",
         category: "Casual Wear",
         price: 23500,
         image: "IMG-20251124-WA0082.jpg",
         description: "Stylish luxury combat shorts"
+    },
+    {
+        id: 15,
+        name: "Round neck T-shirts",
+        category: "Casual Wear",
+        price: 24000,
+        image: "WhatsApp Image 2025-12-29 at 13.02.36 (1).jpeg",
+        description: "Standard round neck"
+    },
+    
+    // ============== ACCESSORIES ==============
+    {
+        id: 16,
+        name: "Hand Fans",
+        category: "Accessories",
+        price: 7000,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Rt5C7yKcHaeFD6NCMRLM_WzNIMKx2jeJPg&s",
+        description: "Elegant hand fans for style and comfort"
+    },
+    {
+        id: 17,
+        name: "Sunset Lamp",
+        category: "Accessories",
+        price: 10500,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkNiZOLksA4w9T4t72f_PobEb3CASwJI8JA&s",
+        description: "Beautiful sunset lamp for ambient lighting"
+    },
+    {
+        id: 18,
+        name: "Phone Holder with Amplifier",
+        category: "Accessories",
+        price: 16000,
+        image: "IMG-20251119-WA0140.jpg",
+        description: "F19 mobile phone holder with screen amplifier"
+    },
+    {
+        id: 19,
+        name: "Stanley Cup",
+        category: "Accessories",
+        price: 17000,
+        image: "IMG-20251119-WA0141.jpg",
+        description: "Premium Stanley cup collection"
+    },
+    {
+        id: 20,
+        name: "Hoddie",
+        category: "outwear",
+        price: 27000,
+        image: "WhatsApp Image 2025-12-29 at 13.01.33.jpeg",
+        description: "high quality luxury crop hoodie"
+    },
+    
+    // ============== FORMAL WEAR ==============
+    {
+        id: 21,
+        name: "Shirt",
+        category: "Formal Wear",
+        price: 7000,
+        image: "https://i5.walmartimages.com/seo/George-Men-s-Assorted-Crew-T-Shirts-6-Pack_9a49c841-5808-4fe0-b7ab-15d040df38f4.d976930a03bcef0f6b055077f0ee3a77.jpeg",
+        description: "Classic formal shirts for professional look"
+    },
+    {
+        id: 22,
+        name: "Quality tees",
+        category: "casual Wear",
+        price: 19000,
+        image: "WhatsApp Image 2025-12-29 at 12.59.42.jpeg",
+        description: "Quality tees"
+    },
+    {
+        id: 23,
+        name: "Maxi gowns",
+        category: "Formal Wear",
+        price: 11000,
+        image: "WhatsApp Image 2025-12-29 at 12.59.32.jpeg",
+        description: "Quality Maxi gowns"
+    },
+    
+    // ============== FOOTWEAR ==============
+    {
+        id: 24,
+        name: "Premium Sneakers",
+        category: "Footwear",
+        price: 33000,
+        image: "https://www.cartrollers.com/wp-content/uploads/2022/11/PREMIUM-UNISEX-FASHION-STELLAR-SNEAKERS-2.jpeg",
+        description: "Luxury sneakers with premium materials"
+    },
+    {
+        id: 25,
+        name: "Luxury Big Tops",
+        category: "outwear",
+        price: 15500,
+        image: "IMG-20251119-WA0138.jpg",
+        description: "Trendy luxury big tops"
+    },
+    {
+        id: 26,
+        name: "Luxury gown",
+        category: "Formal wear",
+        price: 13900,
+        image: "WhatsApp Image 2025-12-30 at 14.35.38.jpeg",
+        description: "High quality luxury gown"
+    },
+    
+    // ============== KNITWEAR ==============
+    {
+        id: 27,
+        name: "Leggings",
+        category: "Knitwear",
+        price: 12000,
+        image: "https://hips.hearstapps.com/hmg-prod/images/whm250110-digital-ecomm-leggingswithpockets-lululemon-4474-68deb0bcb4d87.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*",
+        description: "Comfortable and stylish leggings"
+    },
+    {
+        id: 28,
+        name: "Joggers",
+        category: "Knitwear",
+        price: 14500,
+        image: "WhatsApp Image 2025-12-29 at 12.57.13.jpeg",
+        description: "Quality Joggers"
+    },
+    
+    // ============== OUTERWEAR ==============
+    {
+        id: 29,
+        name: "Designer Top",
+        category: "Outerwear",
+        price: 10000,
+        image: "IMG-20251121-WA0018.jpg",
+        description: "Exclusive designer top collection"
+    },
+    {
+        id: 30,
+        name: "NGM Collection",
+        category: "Outerwear",
+        price: 16000,
+        image: "IMG-20251119-WA0170.jpg",
+        description: "Exclusive NGM collection pieces"
+    },
+    {
+        id: 31,
+        name: "Ladies Shorts",
+        category: "Outerwear",
+        price: 10500,
+        image: "IMG-20251119-WA0150.jpg",
+        description: "Quality shorts for ladies"
+    },
+    {
+        id: 32,
+        name: "crop shirts",
+        category: "Outerwear",
+        price: 13000,
+        image: "WhatsApp Image 2025-12-30 at 14.36.08.jpeg",
+        description: "Trendy denim jacket for all seasons"
+    },
+    
+    // ============== INNER WEAR ==============
+    {
+        id: 33,
+        name: "Booty Shorts",
+        category: "Inner Wear",
+        price: 7500,
+        image: "IMG-20251121-WA0049.jpg",
+        description: "Stylish booty shorts"
+    },
+    {
+        id: 34,
+        name: "Silk Nightwear",
+        category: "Inner Wear",
+        price: 15000,
+        image: "https://images.unsplash.com/photo-1585487000160-6eb9ce6b5a74?w=400&q=80",
+        description: "Luxury silk nightwear sets"
+    },
+    {
+        id: 35,
+        name: "Comfort Bras",
+        category: "Inner Wear",
+        price: 8500,
+        image: "https://images.unsplash.com/photo-1590845947676-c4b3e6b8f7d7?w=400&q=80",
+        description: "Premium comfort bras collection"
     }
+    
+    // ============== ADD NEW PRODUCTS BELOW ==============
+    // COPY THIS EXAMPLE, EDIT, AND ADD BELOW:
+    // {
+    //     id: 36, // ← Change this to next number (36, 37, 38, etc.)
+    //     name: "Designer Blazer",
+    //     category: "Formal Wear", // ← Must match category exactly
+    //     price: 45000,
+    //     image: "blazer.jpg", // ← Use your image filename
+    //     description: "Premium designer blazer for formal occasions"
+    // },
+    
+    // ADD YOUR NEW PRODUCTS HERE ↓↓↓
+    // Example:
+    // {
+    //     id: 36,
+    //     name: "Summer Dress",
+    //     category: "Casual Wear",
+    //     price: 18000,
+    //     image: "summer-dress.jpg",
+    //     description: "Light and comfortable summer dress"
+    // }
 ];
 
+// ==============================================
+// SAFE PRODUCT HELPER FUNCTIONS
+// ==============================================
+
+// Function to get the next available product ID
+function getNextProductId() {
+    if (products.length === 0) return 1;
+    
+    // Find the highest ID safely
+    let maxId = 0;
+    for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+        if (product && typeof product.id === 'number' && product.id > maxId) {
+            maxId = product.id;
+        }
+    }
+    return maxId + 1;
+}
+
+// Function to validate a product before adding
+function validateProduct(product) {
+    const errors = [];
+    
+    // Check required fields
+    if (!product.name || product.name.trim() === '') {
+        errors.push("Product name is required");
+    }
+    
+    if (!product.category || product.category.trim() === '') {
+        errors.push("Category is required");
+    }
+    
+    // Validate price
+    const priceNum = Number(product.price);
+    if (isNaN(priceNum) || priceNum <= 0) {
+        errors.push("Price must be a positive number");
+    }
+    
+    // Validate ID
+    if (typeof product.id !== 'number' || product.id <= 0) {
+        errors.push("ID must be a positive number");
+    }
+    
+    // Check for duplicate ID
+    const existingId = products.find(p => p.id === product.id);
+    if (existingId) {
+        errors.push(`Product ID ${product.id} already exists. Use a unique ID.`);
+    }
+    
+    // Validate category
+    const validCategories = [
+        "Casual Wear", 
+        "Accessories", 
+        "Formal Wear", 
+        "Footwear", 
+        "Knitwear", 
+        "Outerwear", 
+        "Inner Wear"
+    ];
+    
+    if (!validCategories.includes(product.category)) {
+        errors.push(`Category must be one of: ${validCategories.join(", ")}`);
+    }
+    
+    return {
+        isValid: errors.length === 0,
+        errors: errors,
+        fixedProduct: {
+            id: product.id,
+            name: (product.name || '').trim(),
+            category: (product.category || 'Casual Wear').trim(),
+            price: Math.max(0, priceNum || 0),
+            image: product.image || 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80',
+            description: (product.description || 'Premium quality fashion item from Fikky\'s Collection').trim()
+        }
+    };
+}
+
+// Function to add a new product (manual method - you can call this from console)
+function addProductManually(productData) {
+    console.log("=== ADDING NEW PRODUCT ===");
+    
+    // Auto-generate ID if not provided
+    if (!productData.id) {
+        productData.id = getNextProductId();
+        console.log(`📝 Auto-assigned ID: ${productData.id}`);
+    }
+    
+    // Validate the product
+    const validation = validateProduct(productData);
+    
+    if (!validation.isValid) {
+        console.error("❌ Product validation failed:");
+        validation.errors.forEach(error => console.error(`  - ${error}`));
+        
+        // Show error toast
+        showToast(`Failed to add product: ${validation.errors[0]}`, 'error');
+        return false;
+    }
+    
+    // Add the product
+    products.push(validation.fixedProduct);
+    
+    console.log(`✅ Product "${validation.fixedProduct.name}" added successfully!`);
+    console.log(`   ID: ${validation.fixedProduct.id}`);
+    console.log(`   Category: ${validation.fixedProduct.category}`);
+    console.log(`   Price: ₦${validation.fixedProduct.price.toLocaleString()}`);
+    
+    // Refresh the website display
+    updateCategories();
+    applyFilters();
+    
+    // Show success message
+    showToast(`"${validation.fixedProduct.name}" added successfully!`, 'success');
+    
+    return true;
+}
+
+// Function to safely load products (handles invalid data)
+function safelyLoadProducts() {
+    const validProducts = [];
+    const errors = [];
+    
+    for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+        
+        // Skip if product is null or undefined
+        if (!product) {
+            errors.push(`Product at index ${i} is empty`);
+            continue;
+        }
+        
+        // Validate product
+        const validation = validateProduct(product);
+        
+        if (validation.isValid) {
+            validProducts.push(validation.fixedProduct);
+        } else {
+            errors.push(`Product ID ${product.id || 'unknown'}: ${validation.errors.join(', ')}`);
+        }
+    }
+    
+    // Log any errors
+    if (errors.length > 0) {
+        console.warn("⚠️ Some products had issues:", errors);
+        showToast(`Fixed ${errors.length} product errors`, 'info');
+    }
+    
+    return validProducts;
+}
+
+// Function to update categories list safely
+function updateCategories() {
+    try {
+        const uniqueCategories = new Set();
+        
+        // Collect categories from valid products
+        products.forEach(product => {
+            if (product && product.category) {
+                uniqueCategories.add(product.category);
+            }
+        });
+        
+        categories = ["All Products", ...Array.from(uniqueCategories)];
+        
+        // Update the filter buttons
+        renderCategoryFilters();
+        
+        return categories;
+    } catch (error) {
+        console.error("Error updating categories:", error);
+        return ["All Products", "Casual Wear", "Accessories"];
+    }
+}
+
+// ==============================================
+// EASY PRODUCT ADDING - CONSOLE HELPER
+// ==============================================
+
+// Add this helper to the global scope for easy access
+window.FikkyShop = {
+    // Get help with adding products
+    help: function() {
+        console.log(`
+🎯 HOW TO ADD PRODUCTS - FIKKY'S COLLECTION 🎯
+============================================
+
+📌 METHOD 1: EDIT THE CODE DIRECTLY (Easiest)
+------------------------------------------------
+1. Open the code editor
+2. Find the 'products' array (around line 30)
+3. Add your new product at the end (after id: 35)
+4. Save and refresh the page
+
+📌 METHOD 2: USE THE CONSOLE (Quick Test)
+------------------------------------------
+1. Open browser console (F12)
+2. Copy and paste this:
+   
+   FikkyShop.add({
+       name: "New Product",
+       category: "Casual Wear",
+       price: 15000,
+       image: "product.jpg",
+       description: "Description here"
+   })
+
+📌 PRODUCT TEMPLATE:
+-------------------
+{
+    id: 36,                    // ← CHANGE THIS (must be unique)
+    name: "Product Name",      // ← Your product name
+    category: "Casual Wear",   // ← Choose from list below
+    price: 15000,              // ← Numbers only (no ₦ symbol)
+    image: "your-image.jpg",   // ← Your image file or URL
+    description: "Description"
+}
+
+📌 AVAILABLE CATEGORIES:
+-----------------------
+- "Casual Wear"
+- "Accessories"
+- "Formal Wear"
+- "Footwear"
+- "Knitwear"
+- "Outerwear"
+- "Inner Wear"
+
+📌 USEFUL COMMANDS:
+------------------
+FikkyShop.help()      - Show this help
+FikkyShop.list()      - List all products
+FikkyShop.count()     - Count products
+FikkyShop.nextId()    - Get next available ID
+FikkyShop.validateAll() - Check for errors
+
+📌 COMMON MISTAKES TO AVOID:
+---------------------------
+✅ DO: Use unique IDs (36, 37, 38...)
+❌ DON'T: Use duplicate IDs
+
+✅ DO: Use exact category names
+❌ DON'T: Make up new categories
+
+✅ DO: Use numbers for price (15000)
+❌ DON'T: Add ₦ symbol in price
+
+✅ DO: Use .jpg, .png, or full URL
+❌ DON'T: Forget image extension
+
+💡 TIP: Always use FikkyShop.nextId() to get the correct next ID!
+        `);
+    },
+    
+    // Quick add product from console
+    add: function(productData) {
+        return addProductManually(productData);
+    },
+    
+    // List all products
+    list: function() {
+        if (products.length === 0) {
+            console.log("📭 No products found");
+            return 0;
+        }
+        
+        console.log(`📦 Total Products: ${products.length}`);
+        console.table(products.map(p => ({
+            ID: p.id,
+            Name: p.name,
+            Category: p.category,
+            Price: `₦${p.price.toLocaleString()}`,
+            Image: p.image ? p.image.substring(0, 30) + '...' : 'No image'
+        })));
+        return products.length;
+    },
+    
+    // Count products
+    count: function() {
+        console.log(`📊 Total Products: ${products.length}`);
+        console.log(`📁 Categories: ${[...new Set(products.map(p => p.category))].join(', ')}`);
+        return products.length;
+    },
+    
+    // Get next available ID
+    nextId: function() {
+        const nextId = getNextProductId();
+        console.log(`🆔 Next available ID: ${nextId}`);
+        console.log(`📝 Last product ID: ${nextId - 1}`);
+        return nextId;
+    },
+    
+    // Find duplicate IDs
+    findDuplicates: function() {
+        const ids = products.map(p => p.id);
+        const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
+        
+        if (duplicates.length > 0) {
+            console.error("❌ Duplicate IDs found:", [...new Set(duplicates)]);
+            console.log("Affected products:");
+            duplicates.forEach(id => {
+                const dupProducts = products.filter(p => p.id === id);
+                dupProducts.forEach(p => console.log(`  - ID ${id}: "${p.name}"`));
+            });
+        } else {
+            console.log("✅ All IDs are unique");
+        }
+        return duplicates;
+    },
+    
+    // Validate all products
+    validateAll: function() {
+        const errors = [];
+        
+        if (products.length === 0) {
+            console.log("ℹ️ No products to validate");
+            return [];
+        }
+        
+        console.log(`🔍 Validating ${products.length} products...`);
+        
+        products.forEach((product, index) => {
+            const validation = validateProduct(product);
+            if (!validation.isValid) {
+                errors.push({
+                    index: index,
+                    id: product.id,
+                    name: product.name,
+                    errors: validation.errors
+                });
+            }
+        });
+        
+        if (errors.length > 0) {
+            console.error(`❌ Found ${errors.length} validation error(s):`);
+            errors.forEach(error => {
+                console.error(`  Product #${error.index} (ID: ${error.id} - "${error.name}"):`);
+                error.errors.forEach(err => console.error(`    - ${err}`));
+            });
+        } else {
+            console.log("✅ All products are valid!");
+        }
+        
+        return errors;
+    },
+    
+    // Get product by ID
+    get: function(id) {
+        const product = products.find(p => p.id === id);
+        if (product) {
+            console.log(`🔍 Product found (ID: ${id}):`);
+            console.log(`   Name: ${product.name}`);
+            console.log(`   Category: ${product.category}`);
+            console.log(`   Price: ₦${product.price.toLocaleString()}`);
+            console.log(`   Image: ${product.image}`);
+            console.log(`   Description: ${product.description}`);
+            return product;
+        } else {
+            console.error(`❌ Product with ID ${id} not found`);
+            return null;
+        }
+    },
+    
+    // Update a product
+    update: function(id, updates) {
+        const index = products.findIndex(p => p.id === id);
+        if (index === -1) {
+            console.error(`❌ Product with ID ${id} not found`);
+            return false;
+        }
+        
+        const updatedProduct = { ...products[index], ...updates, id: id };
+        const validation = validateProduct(updatedProduct);
+        
+        if (!validation.isValid) {
+            console.error("❌ Update failed:");
+            validation.errors.forEach(error => console.error(`  - ${error}`));
+            return false;
+        }
+        
+        products[index] = validation.fixedProduct;
+        console.log(`✅ Product ID ${id} updated successfully!`);
+        
+        // Refresh display
+        updateCategories();
+        applyFilters();
+        
+        return true;
+    },
+    
+    // Remove a product
+    remove: function(id) {
+        const index = products.findIndex(p => p.id === id);
+        if (index === -1) {
+            console.error(`❌ Product with ID ${id} not found`);
+            return false;
+        }
+        
+        const productName = products[index].name;
+        products.splice(index, 1);
+        
+        console.log(`🗑️ Product "${productName}" (ID: ${id}) removed successfully`);
+        
+        // Refresh display
+        updateCategories();
+        applyFilters();
+        
+        return true;
+    }
+};
+
+// ==============================================
+// APPLICATION SETUP (DO NOT EDIT BELOW THIS LINE)
+// ==============================================
+
 // Extract unique categories
-const categories = ["All Products", ...new Set(products.map(p => p.category))];
+let categories = ["All Products", ...new Set(products.map(p => p.category))];
 
 // Cart State
 let cart = JSON.parse(localStorage.getItem('fikky-cart')) || [];
@@ -290,6 +848,10 @@ const elements = {
     trackOrderLink: document.getElementById('trackOrderLink')
 };
 
+// ==============================================
+// INITIALIZATION FUNCTIONS
+// ==============================================
+
 // Initialize App
 function init() {
     // First, ensure body is visible
@@ -301,6 +863,19 @@ function init() {
     
     // Initialize after loading
     setTimeout(() => {
+        // Safely load products first
+        console.log("🛍️ Loading products...");
+        
+        // Validate all products on startup
+        const invalidProducts = window.FikkyShop.validateAll();
+        
+        if (invalidProducts.length > 0) {
+            showToast(`Fixed ${invalidProducts.length} product issues`, 'info');
+        }
+        
+        // Show product count
+        console.log(`📊 Loaded ${products.length} products`);
+        
         hideLoadingScreen();
         initParticles();
         renderCategoryFilters();
@@ -317,11 +892,9 @@ function init() {
             section.style.visibility = 'visible';
         });
         
-        // Force products grid visibility
-        if (elements.productsGrid) {
-            elements.productsGrid.style.opacity = '1';
-            elements.productsGrid.style.visibility = 'visible';
-        }
+        // Show helper message
+        console.log("💡 Tip: Type 'FikkyShop.help()' in console for product management help");
+        
     }, 1500);
 }
 
@@ -372,6 +945,9 @@ function initParticles() {
 }
 
 function renderCategoryFilters() {
+    // Update categories list
+    categories = ["All Products", ...new Set(products.map(p => p.category))];
+    
     if (elements.categoryFilters) {
         elements.categoryFilters.innerHTML = categories.map(category => `
             <button class="category-btn ${category === "All Products" ? "active" : ""}" 
@@ -433,10 +1009,12 @@ function searchProducts(query) {
 
 function applyFilters() {
     filteredProducts = products.filter(product => {
+        if (!product) return false;
+        
         const matchCategory = activeCategory === "All Products" || product.category === activeCategory;
         const matchSearch = 
-            product.name.toLowerCase().includes(searchQuery) || 
-            product.category.toLowerCase().includes(searchQuery) ||
+            (product.name && product.name.toLowerCase().includes(searchQuery)) || 
+            (product.category && product.category.toLowerCase().includes(searchQuery)) ||
             (product.description && product.description.toLowerCase().includes(searchQuery));
         return matchCategory && matchSearch;
     });
@@ -451,9 +1029,12 @@ function renderProducts() {
         elements.productsGrid.innerHTML = `
             <div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
                 <i class="fas fa-search" style="font-size: 48px; color: var(--color-text-muted); margin-bottom: 20px;"></i>
-                <p style="font-size: 18px; color: var(--color-text-muted); margin-bottom: 30px;">No products found. Try a different search or category.</p>
+                <h3 style="color: var(--color-text-muted); margin-bottom: 10px;">No products found</h3>
+                <p style="color: var(--color-text-muted); margin-bottom: 30px;">
+                    Try a different search or browse all categories
+                </p>
                 <button class="hero-btn secondary" onclick="resetFilters()" style="border: none;">
-                    <span>Reset Filters</span>
+                    <span>Show All Products</span>
                     <i class="fas fa-redo"></i>
                 </button>
             </div>
@@ -461,29 +1042,41 @@ function renderProducts() {
         return;
     }
     
-    elements.productsGrid.innerHTML = filteredProducts.map((product, index) => `
+    elements.productsGrid.innerHTML = filteredProducts.map((product, index) => {
+        // Safe defaults for product data
+        const safeProduct = {
+            id: product.id || 0,
+            name: product.name || 'Unnamed Product',
+            category: product.category || 'Uncategorized',
+            price: product.price || 0,
+            image: product.image || 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80',
+            description: product.description || 'Premium quality fashion item from Fikky\'s Collection'
+        };
+        
+        return `
         <div class="product-card" style="animation-delay: ${index * 0.1}s">
-            <img src="${product.image}" alt="${product.name}" class="product-image" 
+            <img src="${safeProduct.image}" alt="${safeProduct.name}" class="product-image" 
                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80'">
             <div class="product-info">
-                <span class="product-category">${product.category}</span>
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-description">${product.description || 'Premium quality fashion item from Fikky\'s Collection'}</p>
-                <div class="product-price">${CONFIG.CURRENCY_SYMBOL}${product.price.toLocaleString()}</div>
+                <span class="product-category">${safeProduct.category}</span>
+                <h3 class="product-name">${safeProduct.name}</h3>
+                <p class="product-description">${safeProduct.description}</p>
+                <div class="product-price">${CONFIG.CURRENCY_SYMBOL}${safeProduct.price.toLocaleString()}</div>
                 <div class="product-actions">
-                    <button class="add-to-cart-btn" onclick="addToCart(${product.id})" 
+                    <button class="add-to-cart-btn" onclick="addToCart(${safeProduct.id})" 
                             data-tooltip="Add to Cart">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Add to Cart</span>
                     </button>
-                    <button class="quick-view-btn" onclick="showQuickView(${product.id})" 
+                    <button class="quick-view-btn" onclick="showQuickView(${safeProduct.id})" 
                             data-tooltip="Quick View">
                         <i class="fas fa-eye"></i>
                     </button>
                 </div>
             </div>
         </div>
-    `).join("");
+        `;
+    }).join("");
     
     // Make sure grid is visible
     elements.productsGrid.style.opacity = '1';
@@ -513,25 +1106,35 @@ function showQuickView(productId) {
     const product = products.find(p => p.id === productId);
     if (!product || !elements.quickViewBody) return;
     
+    // Safe defaults
+    const safeProduct = {
+        id: product.id || 0,
+        name: product.name || 'Unnamed Product',
+        category: product.category || 'Uncategorized',
+        price: product.price || 0,
+        image: product.image || 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80',
+        description: product.description || 'Premium quality fashion item from Fikky\'s Collection'
+    };
+    
     elements.quickViewBody.innerHTML = `
         <div class="quick-view-content-inner">
             <div class="quick-view-image">
-                <img src="${product.image}" alt="${product.name}" 
+                <img src="${safeProduct.image}" alt="${safeProduct.name}" 
                      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80'">
             </div>
             <div class="quick-view-details">
-                <span class="product-category">${product.category}</span>
-                <h2 class="product-name">${product.name}</h2>
-                <p class="product-description">${product.description || 'Premium quality fashion item from Fikky\'s Collection'}</p>
-                <div class="product-price">${CONFIG.CURRENCY_SYMBOL}${product.price.toLocaleString()}</div>
+                <span class="product-category">${safeProduct.category}</span>
+                <h2 class="product-name">${safeProduct.name}</h2>
+                <p class="product-description">${safeProduct.description}</p>
+                <div class="product-price">${CONFIG.CURRENCY_SYMBOL}${safeProduct.price.toLocaleString()}</div>
                 
                 <div class="quick-view-actions">
-                    <button class="add-to-cart-btn large" onclick="addToCart(${product.id}); closeQuickView();" 
+                    <button class="add-to-cart-btn large" onclick="addToCart(${safeProduct.id}); closeQuickView();" 
                             data-tooltip="Add to cart and close">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Add to Cart</span>
                     </button>
-                    <button class="whatsapp-btn" onclick="shareProduct(${product.id})" 
+                    <button class="whatsapp-btn" onclick="shareProduct(${safeProduct.id})" 
                             data-tooltip="Share on WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                         <span>Share</span>
@@ -605,6 +1208,11 @@ function shareProduct(productId) {
 // Cart Functions
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
+    if (!product) {
+        showToast("Product not found", "error");
+        return;
+    }
+    
     const existingItem = cart.find(item => item.id === productId);
 
     if (existingItem) {
@@ -901,8 +1509,8 @@ function handleOrderSubmit(e) {
     
     message += `\n*Delivery Information:*\n`;
     message += `📍 Location: ${CONFIG.SHOP_LOCATION}\n`;
-    message += `🚚 Weekday Delivery: 6-7pm via dispatch rider\n`;
-    message += `📦 Weekend Delivery: Saturday & Sunday\n`;
+    message += `🚚 Weekday Delivery: ${CONFIG.STORE_INFO.deliveryWeekdays}\n`;
+    message += `📦 Weekend Delivery: ${CONFIG.STORE_INFO.deliveryWeekends}\n`;
     
     message += `\n📅 *Order Date:* ${new Date().toLocaleDateString('en-NG', {
         weekday: 'long',
@@ -913,7 +1521,7 @@ function handleOrderSubmit(e) {
         minute: '2-digit'
     })}\n`;
     
-    message += `\n💖 *Thank you for shopping with Fikky's Collection!* 💖`;
+    message += `\n💖 *Thank you for shopping with ${CONFIG.SHOP_NAME}!* 💖`;
     
     // Encode message for WhatsApp
     const encodedMessage = encodeURIComponent(message);
