@@ -1519,6 +1519,16 @@ function handleOrderSubmit(e) {
         minute: '2-digit'
     })}\n`;
     
+    // ==============================================
+    // ADDED: ORDER CONFIRMATION MESSAGE
+    // ==============================================
+    message += `\n*📝 PLEASE CONFIRM THIS ORDER*\n`;
+    message += `Please reply with "CONFIRMED" to confirm your order.\n\n`;
+    message += `*💳 PAYMENT DETAILS*\n`;
+    message += `Please provide your payment details after confirming this order.\n`;
+   
+    // ==============================================
+    
     message += `\n💖 *Thank you for shopping with ${CONFIG.SHOP_NAME}!* 💖`;
     
     // Encode message for WhatsApp
