@@ -1523,7 +1523,7 @@ function handleOrderSubmit(e) {
     
     // Encode message for WhatsApp
     const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/${CONFIG.08160227731}?text=${encodedMessage}`;
     
     // Show loading state on the WhatsApp button
     const whatsappBtn = elements.orderForm?.querySelector('.whatsapp-btn');
@@ -1592,7 +1592,7 @@ function handleContactSubmit(e) {
     whatsappMessage += `\n📅 *Submitted:* ${new Date().toLocaleDateString('en-NG')}`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/${CONFIG.08160227731}?text=${encodedMessage}`;
     
     // Show loading state
     const submitBtn = elements.contactForm?.querySelector(".submit-btn");
@@ -1965,3 +1965,4 @@ document.addEventListener('mouseover', function(e) {
         }
     }
 });
+
