@@ -419,7 +419,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 22px; /* Increased from 20px */
+    font-size: 20px;
     color: var(--color-text-muted);
     margin-bottom: 48px;
     font-weight: 300;
@@ -440,7 +440,7 @@ body {
     align-items: center;
     gap: 12px;
     padding: 18px 40px;
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
@@ -514,7 +514,7 @@ body {
 }
 
 .stat-label {
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -589,7 +589,7 @@ body {
 }
 
 .section-subtitle {
-    font-size: 20px; /* Increased from 18px */
+    font-size: 18px;
     color: var(--color-text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -638,7 +638,7 @@ body {
     padding: 16px 20px 16px 50px;
     border-radius: var(--radius-md);
     font-family: var(--font-sans);
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     transition: all var(--transition-normal);
 }
 
@@ -683,13 +683,13 @@ body {
 }
 
 .category-btn {
-    padding: 14px 24px; /* Increased from 12px */
+    padding: 12px 24px;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     color: var(--color-text);
     border-radius: 50px;
     cursor: pointer;
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -715,13 +715,13 @@ body {
     display: none;
     align-items: center;
     gap: 8px;
-    padding: 14px 24px; /* Increased from 12px */
+    padding: 12px 24px;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     color: var(--color-text);
     border-radius: var(--radius-md);
     cursor: pointer;
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 500;
     transition: all var(--transition-normal);
     border: none;
@@ -779,14 +779,14 @@ body {
 
 .mobile-filter-header h3 {
     font-family: var(--font-serif);
-    font-size: 26px; /* Increased from 24px */
+    font-size: 24px;
 }
 
 .close-filter {
     background: transparent;
     border: none;
     color: var(--color-text);
-    font-size: 28px; /* Increased from 24px */
+    font-size: 24px;
     cursor: pointer;
     padding: 8px;
     border-radius: var(--radius-sm);
@@ -879,11 +879,11 @@ body {
 
 .product-category {
     display: inline-block;
-    font-size: 13px; /* Increased from 12px */
+    font-size: 14px; /* Increased from 12px */
     font-weight: 500;
     color: var(--color-primary);
     background: rgba(212, 175, 55, 0.1);
-    padding: 7px 14px; /* Increased from 6px 12px */
+    padding: 8px 16px; /* Increased from 6px 12px */
     border-radius: 50px;
     margin-bottom: 12px;
     text-transform: uppercase;
@@ -904,7 +904,7 @@ body {
 }
 
 .product-description {
-    font-size: 17px; /* Increased from 15px */
+    font-size: 16px; /* Increased from 15px */
     color: var(--color-text-muted);
     margin-bottom: 15px;
     line-height: 1.8; /* Increased from 1.7 */
@@ -936,7 +936,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 14px; /* Increased from 12px */
+    padding: 12px;
     background: transparent;
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
@@ -1105,14 +1105,14 @@ body {
 }
 
 .quick-view-details .product-description {
-    font-size: 19px; /* Increased from 17px */
+    font-size: 18px; /* Increased from 17px */
     color: var(--color-text-muted);
     margin-bottom: 25px;
     line-height: 1.9; /* Increased from 1.8 */
 }
 
 .quick-view-details .product-price {
-    font-size: 42px; /* Increased from 36px */
+    font-size: 40px; /* Increased from 36px */
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 30px;
@@ -1126,8 +1126,8 @@ body {
 
 .add-to-cart-btn.large {
     flex: 2;
-    padding: 20px 32px; /* Increased from 18px */
-    font-size: 18px; /* Increased from 16px */
+    padding: 18px 32px;
+    font-size: 16px;
 }
 
 .whatsapp-btn {
@@ -1136,12 +1136,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 20px 24px; /* Increased from 18px */
+    padding: 18px 24px;
     background: #25D366;
     border: none;
     color: white;
     border-radius: var(--radius-md);
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1168,7 +1168,7 @@ body {
     align-items: center;
     gap: 10px;
     color: var(--color-text-muted);
-    font-size: 16px; /* Increased from 14px */
+    font-size: 15px; /* Increased from 14px */
 }
 
 .feature i {
@@ -1306,14 +1306,14 @@ body {
 
 .ceo-name {
     font-family: var(--font-serif);
-    font-size: 36px; /* Increased from 32px */
+    font-size: 32px;
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 8px;
 }
 
 .ceo-title {
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1328,7 +1328,7 @@ body {
 .ceo-quote i {
     position: absolute;
     color: var(--color-primary);
-    font-size: 28px; /* Increased from 24px */
+    font-size: 24px;
     opacity: 0.5;
 }
 
@@ -1343,7 +1343,7 @@ body {
 }
 
 .ceo-quote p {
-    font-size: 20px; /* Increased from 18px */
+    font-size: 18px;
     font-style: italic;
     color: var(--color-text);
     line-height: 1.8;
@@ -1364,14 +1364,14 @@ body {
 
 .story-title {
     font-family: var(--font-serif);
-    font-size: 36px; /* Increased from 32px */
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 24px;
     color: var(--color-primary);
 }
 
 .story-text {
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     color: var(--color-text-muted);
     line-height: 1.8;
     margin-bottom: 20px;
@@ -1427,14 +1427,14 @@ body {
 
 .milestone-content h4 {
     font-family: var(--font-serif);
-    font-size: 22px; /* Increased from 20px */
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--color-text);
 }
 
 .milestone-content p {
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     color: var(--color-text-muted);
     line-height: 1.6;
 }
@@ -1500,14 +1500,14 @@ body {
 
 .contact-card h3 {
     font-family: var(--font-serif);
-    font-size: 24px; /* Increased from 22px */
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 15px;
     color: var(--color-text);
 }
 
 .contact-card p {
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     color: var(--color-text-muted);
     line-height: 1.6;
     margin-bottom: 10px;
@@ -1519,7 +1519,7 @@ body {
 }
 
 .contact-note {
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     color: var(--color-primary);
     font-weight: 500;
     margin-top: 10px;
@@ -1551,7 +1551,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 500;
     color: var(--color-text);
     text-transform: uppercase;
@@ -1568,10 +1568,10 @@ body {
     background: var(--color-background);
     border: 1px solid var(--color-border);
     color: var(--color-text);
-    padding: 16px 20px; /* Increased from 14px 18px */
+    padding: 14px 18px;
     border-radius: var(--radius-md);
     font-family: var(--font-sans);
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     transition: all var(--transition-normal);
     border: none;
 }
@@ -1586,7 +1586,7 @@ body {
 
 .form-group textarea {
     resize: vertical;
-    min-height: 140px; /* Increased from 120px */
+    min-height: 120px;
 }
 
 .form-row {
@@ -1600,11 +1600,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 18px 32px; /* Increased from 16px */
+    padding: 16px 32px;
     background: var(--color-primary);
     border: none;
     color: var(--color-background);
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1671,13 +1671,13 @@ body {
 }
 
 .footer-tagline {
-    font-size: 20px; /* Increased from 18px */
+    font-size: 18px;
     font-weight: 600;
     color: var(--color-text);
 }
 
 .footer-description {
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     color: var(--color-text-muted);
     line-height: 1.8;
 }
@@ -1686,7 +1686,7 @@ body {
 .footer-social h3,
 .footer-newsletter h3 {
     font-family: var(--font-serif);
-    font-size: 22px; /* Increased from 20px */
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 24px;
     color: var(--color-text);
@@ -1703,7 +1703,7 @@ body {
 .footer-links a {
     color: var(--color-text-muted);
     text-decoration: none;
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     transition: all var(--transition-fast);
     display: flex;
     align-items: center;
@@ -1717,7 +1717,7 @@ body {
 
 .footer-social p,
 .footer-newsletter p {
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     color: var(--color-text-muted);
     margin-bottom: 24px;
     line-height: 1.6;
@@ -1780,10 +1780,10 @@ body {
     background: var(--color-background);
     border: 1px solid var(--color-border);
     color: var(--color-text);
-    padding: 14px 20px; /* Increased from 12px */
+    padding: 12px 20px;
     border-radius: var(--radius-md);
     font-family: var(--font-sans);
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     transition: all var(--transition-normal);
     border: none;
 }
@@ -1820,7 +1820,7 @@ body {
 }
 
 .footer-bottom p {
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     color: var(--color-text-muted);
     margin-bottom: 8px;
 }
@@ -1966,19 +1966,19 @@ body {
 }
 
 .empty-cart p {
-    font-size: 20px; /* Increased from 18px */
+    font-size: 18px;
 }
 
 .empty-cart .hero-btn.secondary {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 24px; /* Increased from 12px */
+    padding: 12px 24px;
     background: transparent;
     border: 2px solid rgba(212, 175, 55, 0.3);
     color: var(--color-text);
     border-radius: var(--radius-md);
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2078,7 +2078,7 @@ body {
     border: none;
     color: var(--color-error);
     cursor: pointer;
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 500;
     padding: 8px 16px;
     border-radius: var(--radius-sm);
@@ -2116,7 +2116,7 @@ body {
     background: transparent;
     border: none;
     color: var(--color-text);
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     cursor: pointer;
     transition: all var(--transition-fast);
     font-weight: 500;
@@ -2134,7 +2134,7 @@ body {
 
 .checkout-header h3 {
     font-family: var(--font-serif);
-    font-size: 26px; /* Increased from 24px */
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -2149,11 +2149,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 20px 32px; /* Increased from 18px */
+    padding: 18px 32px;
     background: #25D366;
     border: none;
     color: white;
-    font-size: 18px; /* Increased from 16px */
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2199,7 +2199,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
-    font-size: 22px; /* Increased from 20px */
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -2226,7 +2226,7 @@ body {
     border: 2px solid var(--color-border);
     color: var(--color-text);
     border-radius: var(--radius-md);
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2251,7 +2251,7 @@ body {
     border: none;
     color: var(--color-background);
     border-radius: var(--radius-md);
-    font-size: 15px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2276,7 +2276,7 @@ body {
     border-radius: var(--radius-md);
     padding: 16px 24px;
     color: var(--color-text);
-    font-size: 16px; /* Increased from 14px */
+    font-size: 14px;
     font-weight: 500;
     box-shadow: var(--shadow-lg);
     z-index: 3000;
@@ -2477,15 +2477,15 @@ body {
     
     /* Adjust product text for tablet */
     .product-name {
-        font-size: 22px !important; /* Increased */
+        font-size: 22px !important; /* Increased from original */
     }
     
     .product-description {
-        font-size: 16px !important; /* Increased */
+        font-size: 15px !important; /* Increased from original */
     }
     
     .product-price {
-        font-size: 26px !important; /* Increased */
+        font-size: 26px !important; /* Increased from original */
     }
 }
 
@@ -2622,7 +2622,7 @@ body {
     }
     
     .hero-subtitle {
-        font-size: 20px; /* Increased from 18px */
+        font-size: 18px;
     }
     
     .hero-stats {
@@ -2632,10 +2632,6 @@ body {
     
     .section-title {
         font-size: 40px;
-    }
-    
-    .section-subtitle {
-        font-size: 18px; /* Increased */
     }
     
     .filter-controls {
@@ -2780,8 +2776,8 @@ body {
     }
     
     .quick-view-details .product-description {
-        font-size: 17px; /* Increased */
-        line-height: 1.8; /* Increased */
+        font-size: 17px; /* Increased from original */
+        line-height: 1.8; /* Increased from original */
     }
     
     .product-features {
@@ -2857,7 +2853,7 @@ body {
     }
     
     .hero-subtitle {
-        font-size: 18px; /* Increased from 16px */
+        font-size: 16px;
     }
     
     .section-title {
@@ -2865,8 +2861,8 @@ body {
     }
     
     .section-tag {
-        font-size: 13px; /* Increased from 12px */
-        padding: 7px 18px; /* Increased from 6px 16px */
+        font-size: 12px;
+        padding: 6px 16px;
     }
     
     /* Products Grid for very small screens */
@@ -2934,11 +2930,11 @@ body {
     }
     
     .ceo-name {
-        font-size: 28px; /* Increased from 24px */
+        font-size: 24px;
     }
     
     .ceo-title {
-        font-size: 16px; /* Increased from 14px */
+        font-size: 14px;
     }
     
     .contact-form-wrapper,
@@ -2976,8 +2972,8 @@ body {
     }
     
     .quick-view-details .product-description {
-        font-size: 16px; /* Increased */
-        line-height: 1.8; /* Increased */
+        font-size: 16px; /* Increased from original */
+        line-height: 1.8; /* Increased from original */
     }
     
     .product-features {
@@ -3097,8 +3093,8 @@ body {
     }
     
     .product-description {
-        font-size: 17px !important;
-        line-height: 1.8 !important;
+        font-size: 16px !important; /* Increased from 15px */
+        line-height: 1.8 !important; /* Increased from 1.7 */
     }
     
     .product-price {
