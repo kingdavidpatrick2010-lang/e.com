@@ -324,27 +324,142 @@ const products = [
         image: "IMG-20251121-WA0049.jpg",
         description: "Stylish booty shorts"
     },
+
+    
+    // ============== NEWLY ADDED PRODUCTS (36-51) ==============
     {
-        id: 34,
-        name: "Silk Nightwear",
-        category: "Inner Wear",
-        price: 15000,
-        image: "https://images.unsplash.com/photo-1585487000160-6eb9ce6b5a74?w=400&q=80",
-        description: "Luxury silk nightwear sets"
+        id: 36,
+        name: "Luxury gown",
+        category: "Outerwear",
+        price: 20000,
+        image: "WhatsApp Image 2026-01-02 at 02.51.06.jpeg",
+        description: "High quality luxury gown"
     },
     {
-        id: 35,
-        name: "Comfort Bras",
-        category: "Inner Wear",
-        price: 8500,
-        image: "https://images.unsplash.com/photo-1590845947676-c4b3e6b8f7d7?w=400&q=80",
-        description: "Premium comfort bras collection"
+        id: 37,
+        name: "Luxury joggers",
+        category: "casual Wear",
+        price: 30000,
+        image: "WhatsApp Image 2026-01-02 at 02.52.45 (1).jpeg",
+        description: "Premium luxury joggers"
+    },
+    {
+        id: 38,
+        name: "luxury top",
+        category: "outwear",
+        price: 30000,
+        image: "WhatsApp Image 2026-01-02 at 02.53.28 (1).jpeg",
+        description: "high quality luxury top"
+    },
+    {
+        id: 39,
+        name: "sleeveless sweatshirt",
+        category: "outwear",
+        price: 2000,
+        image: "WhatsApp Image 2026-01-02 at 02.55.33 (2).jpeg",
+        description: "high quality sleevless sweatshirt"
+    },
+    {
+        id: 40,
+        name: "Valentino hand bag",
+        category: "Accessories",
+        price: 15000,
+        image: "WhatsApp Image 2026-01-03 at 14.41.35.jpeg",
+        description: "Valentino handbag available in black, white"
+    },
+    {
+        id: 41,
+        name: "NGM",
+        category: "Formal wear",
+        price: 18000,
+        image: "WhatsApp Image 2026-01-03 at 14.43.23 (1).jpeg",
+        description: "Premium luxury NGM"
+    },
+    {
+        id: 42,
+        name: "Luxury shirts available",
+        category: "Outwear Wear",
+        price: 35000,
+        image: "WhatsApp Image 2026-01-03 at 14.44.18 (1).jpeg",
+        description: "Quality luxury shirts available"
+    },
+    {
+        id: 43,
+        name: "Luxuxry armless ",
+        category: "Knitwear",
+        price: 29000,
+        image: "WhatsApp Image 2026-01-03 at 14.44.32 (1).jpeg",
+        description: "Quality luxury armless available"
+    },
+    {
+        id: 44,
+        name: "Luxury up and down",
+        category: "Outwear",
+        price: 35000,
+        image: "WhatsApp Image 2026-01-03 at 14.45.33 (1).jpeg",
+        description: "Quality luxury up and down available"
+    },
+    {
+        id: 45,
+        name: "Luxury jersey tops",
+        category: "Outwear",
+        price: 30000,
+        image: "WhatsApp Image 2026-01-03 at 14.45.56 (2).jpeg",
+        description: "Luxury jersey tops"
+    },
+    {
+        id: 46,
+        name: "NGM",
+        category: "Casual Wear",
+        price: 15000,
+        image: "WhatsApp Image 2026-01-03 at 14.47.10.jpeg",
+        description: "NGM"
+    },
+    {
+        id: 47,
+        name: "Designer Socks Set",
+        category: "Casual Wear",
+        price: 13000,
+        image: "WhatsApp Image 2026-01-03 at 14.47.32.jpeg",
+        description: "Premium designer socks 5-piece set"
+    },
+    {
+        id: 48,
+        name: "NGM",
+        category: "Casual Wear",
+        price: 24000,
+        image: "WhatsApp Image 2026-01-03 at 14.48.21.jpeg",
+        description: "NGM"
+    },
+    {
+        id: 49,
+        name: "Cartier jacket",
+        category: "Casual wear",
+        price: 39000,
+        image: "WhatsApp Image 2026-01-04 at 17.06.26.jpeg",
+        description: "Luxury cartier jacket"
+    },
+    {
+        id: 50,
+        name: "collar polo",
+        category: "Outwear",
+        price: 30000,
+        image: "WhatsApp Image 2026-01-04 at 17.05.13.jpeg",
+        description: "High quality luxury collar polo"
+    },
+    {
+        id: 51,
+        name: "Luxury 24 update top",
+        category: "Casual Wear",
+        price: 33000,
+        image: "WhatsApp Image 2026-01-04 at 17.07.33.jpeg",
+        description: "Luxury 24 update top"
     }
     
     // ============== ADD NEW PRODUCTS BELOW ==============
     // COPY THIS EXAMPLE, EDIT, AND ADD BELOW:
     // {
-    //     id: 36, // ← Change this to next number (36, 37, 38, etc.)
+    //     id: 52, // ← Change this to next number (52, 53, 54, etc.)
     //     name: "Designer Blazer",
     //     category: "Formal Wear", // ← Must match category exactly
     //     price: 45000,
@@ -355,7 +470,7 @@ const products = [
     // ADD YOUR NEW PRODUCTS HERE ↓↓↓
     // Example:
     // {
-    //     id: 36,
+    //     id: 52,
     //     name: "Summer Dress",
     //     category: "Casual Wear",
     //     price: 18000,
@@ -555,7 +670,7 @@ window.FikkyShop = {
 ------------------------------------------------
 1. Open the code editor
 2. Find the 'products' array (around line 30)
-3. Add your new product at the end (after id: 35)
+3. Add your new product at the end (after id: 51)
 4. Save and refresh the page
 
 📌 METHOD 2: USE THE CONSOLE (Quick Test)
@@ -574,7 +689,7 @@ window.FikkyShop = {
 📌 PRODUCT TEMPLATE:
 -------------------
 {
-    id: 36,                    // ← CHANGE THIS (must be unique)
+    id: 52,                    // ← CHANGE THIS (must be unique)
     name: "Product Name",      // ← Your product name
     category: "Casual Wear",   // ← Choose from list below
     price: 15000,              // ← Numbers only (no ₦ symbol)
@@ -602,7 +717,7 @@ FikkyShop.validateAll() - Check for errors
 
 📌 COMMON MISTAKES TO AVOID:
 ---------------------------
-✅ DO: Use unique IDs (36, 37, 38...)
+✅ DO: Use unique IDs (52, 53, 54...)
 ❌ DON'T: Use duplicate IDs
 
 ✅ DO: Use exact category names
@@ -1518,16 +1633,6 @@ function handleOrderSubmit(e) {
         hour: '2-digit',
         minute: '2-digit'
     })}\n`;
-    
-    // ==============================================
-    // ADDED: ORDER CONFIRMATION MESSAGE
-    // ==============================================
-    message += `\n*📝 PLEASE CONFIRM THIS ORDER*\n`;
-    message += `Please reply with "CONFIRMED" to confirm your order.\n\n`;
-    message += `*💳 PAYMENT DETAILS*\n`;
-    message += `Please provide your payment details after confirming this order.\n`;
-   
-    // ==============================================
     
     message += `\n💖 *Thank you for shopping with ${CONFIG.SHOP_NAME}!* 💖`;
     
